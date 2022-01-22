@@ -21,10 +21,10 @@ grad = zeros(size(theta));
 %
 
 hvals = sigmoid(X * theta);
-J = sum( -y .* log(hvals) - (1 - y) .* log(1 - hvals) ) / m
+J = sum( -y .* log(hvals) - (1 - y) .* log(1 - hvals) ) / m;
 
 for j = 1:size(theta),
-  grad(j) = sum( (hvals - y) .* X(:,j) ) / m
+  grad(j) = sum( (hvals - y) .* X(:,j) ) / m;
 endfor
 % =============================================================
 

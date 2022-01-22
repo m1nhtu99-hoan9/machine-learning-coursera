@@ -10,7 +10,7 @@
 %     [x] sigmoid.m
 %     [x] costFunction.m
 %     [x] predict.m
-%     [] costFunctionReg.m
+%     [x] costFunctionReg.m
 %
 %  For this exercise, you will not need to change any code in this file,
 %  or any other files other than those mentioned above.
