@@ -40,8 +40,6 @@ Theta2_grad = zeros(size(Theta2));
 %         computed in ex4.m
 %
 
-%
-
 [H, X, a1, z2, a2, z3] = feedforwardAndReturnLayers(X, Theta1, Theta2);
 Y = transformOutputToMatrix(y, num_labels);
 
@@ -67,7 +65,7 @@ J = sum(                                               ...
 
 Sigma = zeros(3,1);
 Sigma3 = H - Y;
-Sigma2 = Sigma3 * Theta2 .* sigmoidGradient( zWithoutBiases(z2) );
+Sigma2 = Sigma3 * Theta2 .* sigmoidGradient( zWithBiases(z2) );
 Sigma2 = Sigma2(:,2:end);
            
 Delta_1 = Sigma2' * a1;
@@ -90,8 +88,8 @@ J += (lambda / 2 / m) * (                             ...
         + sum ( sum (Theta2(:, 2:end) .^ 2, 2 ) )     ...
      );
      
-Theta1_grad = Theta1_grad_withoutReg + (lambda / m) * thetaWithoutBiases(Theta1);
-Theta2_grad = Theta2_grad_withoutReg + (lambda / m) * thetaWithoutBiases(Theta2);
+Theta1_grad = Theta1_grad_withoutReg + (lambda / m) * thetaWithBiases(Theta1);
+Theta2_grad = Theta2_grad_withoutReg + (lambda / m) * thetaWithBiases(Theta2);
 % =========================================================================
 
 % Unroll gradients

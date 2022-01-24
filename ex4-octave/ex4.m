@@ -11,8 +11,8 @@
 %     [x] randInitializeWeights.m
 %     [x] nnCostFunction.m  {+ feedforwardAndReturnLayers.m
 %                            , transformOutputToMatrix.m
-%                            , zWithoutBiases.m 
-%                            , thetaWithoutBiases.m }
+%                            , zWithBiases.m 
+%                            , thetaWithBiases.m }
 %
 %  For this exercise, you will not need to change any code in this file,
 %  or any other files other than those mentioned above.
@@ -189,7 +189,7 @@ fprintf('\nTraining Neural Network... \n')
 options = optimset('MaxIter', 50);  % original value: 50
 
 %  You should also try different values of lambda
-lambda = 0.89;  % Original value: 1
+lambda = 0.89;  % original value: 1
 
 % Create "short hand" for the cost function to be minimized
 costFunction = @(p) nnCostFunction(p, ...
