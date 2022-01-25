@@ -1,4 +1,4 @@
-function [Y] = transformOutputToMatrix(y, num_classes)
+function [Y] = onehotEncode(y, num_classes)
   assert(isindex(y), ...
          "Expected `y` to be a vector so that it can be used as index!");
          

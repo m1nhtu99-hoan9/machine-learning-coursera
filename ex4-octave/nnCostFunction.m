@@ -41,7 +41,7 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 [H, X, a1, z2, a2, z3] = feedforwardAndReturnLayers(X, Theta1, Theta2);
-Y = transformOutputToMatrix(y, num_labels);
+Y = onehotEncode(y, num_labels);
 
 J = sum(                                               ...
       sum( -Y .* log(H) - (1 - Y) .* log(1 - H) , 2 )  ...

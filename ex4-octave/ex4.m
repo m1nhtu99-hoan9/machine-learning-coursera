@@ -10,7 +10,7 @@
 %     [x] sigmoidGradient.m 
 %     [x] randInitializeWeights.m
 %     [x] nnCostFunction.m  {+ feedforwardAndReturnLayers.m
-%                            , transformOutputToMatrix.m
+%                            , onehotEncode.m
 %                            , zWithBiases.m 
 %                            , thetaWithBiases.m }
 %
